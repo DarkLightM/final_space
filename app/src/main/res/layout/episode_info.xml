@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/default_margin">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/episode_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_margin"
+        android:textColor="@color/dark_blue"
+        android:textSize="@dimen/title"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Episode Name">
+
+    </com.google.android.material.textview.MaterialTextView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/episode_air_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_margin"
+        android:textColor="@color/dark_blue"
+        android:textSize="@dimen/title"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/episode_name"
+        tools:text="Episode Air Date">
+
+    </com.google.android.material.textview.MaterialTextView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/episode_director"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_margin"
+        android:textColor="@color/dark_blue"
+        android:textSize="@dimen/title"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/episode_air_date"
+        tools:text="Episode Director">
+
+    </com.google.android.material.textview.MaterialTextView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/episode_writer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_margin"
+        android:textColor="@color/dark_blue"
+        android:textSize="@dimen/title"
+        android:textStyle="bold"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/episode_air_date"
+        tools:text="Episode Writer">
+
+    </com.google.android.material.textview.MaterialTextView>
+
+    <ImageView
+        android:id="@+id/director_picture"
+        android:layout_width="@dimen/large_picture_size"
+        android:layout_height="@dimen/large_picture_size"
+        android:layout_marginVertical="@dimen/default_margin"
+        app:layout_constraintLeft_toLeftOf="@id/episode_director"
+        app:layout_constraintRight_toRightOf="@id/episode_director"
+        app:layout_constraintTop_toBottomOf="@id/episode_director">
+
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/writer_picture"
+        android:layout_width="@dimen/large_picture_size"
+        android:layout_height="@dimen/large_picture_size"
+        android:layout_marginVertical="@dimen/default_margin"
+        app:layout_constraintLeft_toLeftOf="@id/episode_writer"
+        app:layout_constraintRight_toRightOf="@id/episode_writer"
+        app:layout_constraintTop_toBottomOf="@id/episode_writer">
+
+    </ImageView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/episode_characters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/director_picture"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="@dimen/default_margin"
+        android:textColor="@color/dark_blue"
+        android:textSize="@dimen/title"
+        android:textStyle="bold"
+        android:text="Episode characters: ">
+
+    </com.google.android.material.textview.MaterialTextView>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/characters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_margin"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/episode_characters">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

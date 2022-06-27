@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/quoteCard"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/default_margin">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/saidBy"
+        android:layout_width="@dimen/default_picture_size"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/quotePicture"
+        app:layout_constraintRight_toRightOf="@id/quotePicture"
+        android:textStyle="bold"
+        android:textColor="@color/dark_blue"
+        android:textSize="@dimen/title"
+        android:textAlignment="center"
+        tools:text="Author">
+    </com.google.android.material.textview.MaterialTextView>
+
+    <ImageView
+        android:id="@+id/quotePicture"
+        android:layout_width="@dimen/default_picture_size"
+        android:layout_height="@dimen/default_picture_size"
+        app:layout_constraintTop_toBottomOf="@id/saidBy"
+        app:layout_constraintLeft_toLeftOf="parent">
+    </ImageView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/quoteName"
+        android:layout_width="@dimen/default_picture_size"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/quotePicture"
+        app:layout_constraintRight_toRightOf="@id/quotePicture"
+        app:layout_constraintTop_toBottomOf="@id/quotePicture"
+        android:textColor="@color/dark_blue"
+        tools:text="Quote"
+        android:textAlignment="center">
+    </com.google.android.material.textview.MaterialTextView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

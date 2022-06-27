@@ -1,0 +1,7 @@
+<resources>
+    <dimen name="default_margin">16dp</dimen>
+    <dimen name="default_picture_size">100dp</dimen>
+    <dimen name="large_picture_size">150dp</dimen>
+    <dimen name="title">18sp</dimen>
+    <dimen name="text">16sp</dimen>
+</resources>
